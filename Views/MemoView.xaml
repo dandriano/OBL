@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:OBL.Controls"
+             xmlns:vm="clr-namespace:OBL.ViewModels"
+             xmlns:t="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="OBL.Views.MemoView">
+    <ContentView.BindingContext>
+        <vm:MemoViewModel />
+    </ContentView.BindingContext>
+    <Grid 
+         RowDefinitions="*,10,*"
+         RowSpacing="10">
+        <Border 
+             Grid.Row="0"
+             Stroke="Gray" 
+            BackgroundColor="WhiteSmoke">
+            <c:MarkdownGraphicsView 
+                     Text="{Binding Text}"
+                     TextColor="{Binding TextColor}"
+                     FontSize="{Binding FontSize}"/>
+        </Border>
+        <BoxView 
+             Grid.Row="1" 
+             HeightRequest="2" 
+             Color="DarkGray" />
+        <Border 
+             Grid.Row="2" 
+             Stroke="Gray" 
+             BackgroundColor="#e1e1e1">
+            <Editor 
+                 Text="{Binding Text}"
+                 TextColor="{Binding TextColor}"
+                 FontSize="{Binding FontSize}"/>
+        </Border>
+    </Grid>
+</ContentView>

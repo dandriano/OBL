@@ -3,7 +3,7 @@
 Markdawn keyboard test
 
 ## *Hello* 👋 **world** 🌍
-![Screenshot so far](./Resources/Images/screen.png)
+[Screenshot so far](./Resources/Images.screen.png)
 
 Points of interest so far:
 

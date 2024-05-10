@@ -1,6 +1,6 @@
 ﻿# OBL
 
-Markdawn keyboard test
+Markdown keyboard test
 
 ## *Hello* 👋 **world** 🌍
 ![Screenshot so far](./Resources/Images/screen.png)

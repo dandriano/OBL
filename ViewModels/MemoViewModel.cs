@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Storage;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace OBL.ViewModels
 {
@@ -24,6 +27,20 @@ namespace OBL.ViewModels
         {
             get => _fontSize;
             set => SetProperty(ref _fontSize, value);
+        }
+
+        public MemoViewModel()
+        {
+            Task.Run(async () =>
+            {
+                using (var stream = await FileSystem.OpenAppPackageFileAsync("source.md"))
+                {
+                    if (stream != null)
+                    {
+                        Text = new StreamReader(stream).ReadToEnd();
+                    }
+                };
+            });
         }
     }
 }

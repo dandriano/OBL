@@ -15,10 +15,7 @@
              Grid.Row="0"
              Stroke="Gray" 
             BackgroundColor="WhiteSmoke">
-            <c:MarkdownGraphicsView 
-                     Text="{Binding Text}"
-                     TextColor="{Binding TextColor}"
-                     FontSize="{Binding FontSize}"/>
+            <c:MarkdownWebView Text="{Binding Text}" />
         </Border>
         <BoxView 
              Grid.Row="1" 

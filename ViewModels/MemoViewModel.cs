@@ -1,13 +1,10 @@
-﻿using CommunityToolkit.Maui.Core;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Maui.Graphics;
 
 namespace OBL.ViewModels
 {
     public class MemoViewModel : ObservableObject
     {
-        // private IPopupService _popupService;
-
         private string _text = string.Empty;
         public string Text
         {

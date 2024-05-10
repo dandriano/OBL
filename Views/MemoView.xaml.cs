@@ -1,5 +1,4 @@
 using Microsoft.Maui.Controls;
-using OBL.ViewModels;
 
 namespace OBL.Views;
 
